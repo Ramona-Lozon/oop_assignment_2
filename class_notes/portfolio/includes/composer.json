@@ -1,0 +1,17 @@
+{
+    "name": "ramona/portfolio",
+    "description": "my portfolio",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Portfolio\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ramona"
+        }
+    ],
+    "require": {}
+}
