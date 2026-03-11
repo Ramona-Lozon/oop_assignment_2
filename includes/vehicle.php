@@ -17,8 +17,7 @@ class vehicle {
         return str_replace('OOP\\', '', $class);
     }
       
-    public function getWheels(): int
-    {
+    public function getWheels(): int {
         return $this->wheels;
     }
 
@@ -26,7 +25,7 @@ class vehicle {
         return "Unknown";
     }
 
-        public function canCommute(): string {
+    public function canCommute(): string {
         return "Unknown";
     }
 
@@ -34,12 +33,11 @@ class vehicle {
         return "Unknown";
     }
 
-    public function displayInfo(): string
-    {
+    public function displayInfo(): string {
         return "
         <div>
-            <h3>Class: " . $this->getClassName() . "</h3>
-            <p>Wheels: " . $this->getWheels() . "</h3>
+            <p>Class: " . $this->getClassName() . "</p>
+            <p>Wheels: " . $this->getWheels() . "</p>
             <p>Can it haul?: " . $this->canHaul() . "</p>
             <p>Can it commute?: " . $this->canCommute() . "</p>
             <p>Can it lane split?: " . $this->canLaneSplit() . "</p>

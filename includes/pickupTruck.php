@@ -2,14 +2,10 @@
 
 namespace OOP;
 
-class pickup extends truck
-{
-    protected bool $canHaul;
-
-    public function __construct(string $passengers, int $wheels)
+class pickup extends truck {
+    public function __construct(string $passengers)
     {
         $passengers = 1-3;
-        $this->hasTruckbed = true;
         parent::__construct($type, $wheels);
 
     }

@@ -38,12 +38,10 @@ use OOP\vehicle;
 <body>
     <h1>Vehicles</h1>
     <?php
-        // Create vehicles
         $truck = new truck("Pickup Truck", 4);
         $car = new car("Sedan", 4);
         $motorcycle = new motorcycle("Harley", 2);
         
-        // Display all vehicles
         echo $truck->displayInfo();
         echo $car->displayInfo();
         echo $motorcycle->displayInfo();
