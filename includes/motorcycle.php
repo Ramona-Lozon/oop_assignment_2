@@ -2,19 +2,21 @@
 
 namespace OOP;
 
-class motorcycle extends vehicle
-{
-    protected int $tires;
-
-    public function __construct(string $type, int $wheels)
-    {
-        $wheels = 4;
+class motorcycle extends vehicle{
+    public function __construct(string $type, int $wheels) {
+        $wheels = 2;
         parent::__construct($type, $wheels);
-        $this->tires = $wheels;
     }
 
-    public function getTires(): int
-    {
-        return $this->tires;
+    public function canHaul(): string {
+        return "No Truckbed";
+    }
+
+    public function canCommute(): string {
+        return "Not good for commuting";
+    }
+
+    public function canLaneSplit(): string {
+        return "It can lane split";
     }
 }

@@ -2,18 +2,47 @@
 
 namespace OOP;
 
-class vehicle{
+class vehicle {
     protected string $type;
     protected int $wheels;
-    public function __construct(string $type, int $wheels){
+
+    public function __construct(string $type, int $wheels)
+    {
         $this->type = $type;
         $this->wheels = $wheels;
     }
 
-    public function getType(): string {
-        return $this->type;
+    public function getClassName(): string {
+        $class = get_class($this);
+        return str_replace('OOP\\', '', $class);
     }
-    public function getWheels(): int {
+      
+    public function getWheels(): int
+    {
         return $this->wheels;
+    }
+
+    public function canHaul(): string {
+        return "Unknown";
+    }
+
+        public function canCommute(): string {
+        return "Unknown";
+    }
+
+    public function canLaneSplit(): string {
+        return "Unknown";
+    }
+
+    public function displayInfo(): string
+    {
+        return "
+        <div>
+            <h3>Class: " . $this->getClassName() . "</h3>
+            <p>Wheels: " . $this->getWheels() . "</h3>
+            <p>Can it haul?: " . $this->canHaul() . "</p>
+            <p>Can it commute?: " . $this->canCommute() . "</p>
+            <p>Can it lane split?: " . $this->canLaneSplit() . "</p>
+        </div>";
     }
 }

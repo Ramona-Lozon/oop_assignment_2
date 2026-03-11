@@ -24,6 +24,7 @@ spl_autoload_register(function ($class) {
 
 use OOP\car;
 use OOP\truck;
+use OOP\motorcycle;
 use OOP\vehicle;
 ?>
 
@@ -37,11 +38,15 @@ use OOP\vehicle;
 <body>
     <h1>Vehicles</h1>
     <?php
+        // Create vehicles
         $truck = new truck("Pickup Truck", 4);
-        var_dump($truck);
-
         $car = new car("Sedan", 4);
-        var_dump($car);
+        $motorcycle = new motorcycle("Harley", 2);
+        
+        // Display all vehicles
+        echo $truck->displayInfo();
+        echo $car->displayInfo();
+        echo $motorcycle->displayInfo();
     ?>
 </body>
 </html>

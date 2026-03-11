@@ -2,20 +2,24 @@
 
 namespace OOP;
 
-class car extends vehicle
-{
-    protected bool $canCommute;
-
+class car extends vehicle {
     public function __construct(string $type, int $wheels)
     {
         $wheels = 4;
-        $this->canCommute = true;
         parent::__construct($type, $wheels);
 
     }
 
-    public function getDefinition(): bool
-    {
-        return $this->$canCommute;
+    public function canHaul(): string {
+        return "no Truckbed";
+
+    }
+
+    public function canCommute(): string {
+        return "Good for commuting";
+    }
+
+    public function canLaneSplit(): string {
+        return "It can't lane split";
     }
 }
