@@ -3,20 +3,9 @@
 namespace OOP;
 
 class motorcycle extends vehicle{
-    public function __construct(string $type, int $wheels) {
+    public function __construct(string $type, string $definition, int $wheels) {
         $wheels = 2;
-        parent::__construct($type, $wheels);
-    }
-
-    public function canHaul(): string {
-        return "No Truckbed";
-    }
-
-    public function canCommute(): string {
-        return "Not good for commuting";
-    }
-
-    public function canLaneSplit(): string {
-        return "It can lane split";
+        $definition = 'Can Lane Split';
+        parent::__construct($type, $definition, $wheels);
     }
 }

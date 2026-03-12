@@ -3,22 +3,23 @@
 namespace OOP;
 
 class truck extends vehicle {
-    public function __construct(string $type, int $wheels) {
-        $wheels = 4;
-        parent::__construct($type, $wheels);
-
+    public function __construct(string $subType, string $passengers, int $wheels) {
+        $type = 'truck';
+        $definition = 'it can Haul';
+        $engineSize = 'Large';
+        $characteristics = 'better off road';
+        parent::__construct($type, $subType, $definition, $engineSize, $characteristics, $passengers, $wheels);
     }
 
-    public function canHaul(): string {
-        return "Has Truckbed";
-
+    public function drive(): string {
+        return "it can drive off road";
     }
 
-    public function canCommute(): string {
-        return "Not good for commuting";
+    public function tow(): string {
+        return "it can tow things";
     }
 
-    public function canLaneSplit(): string {
-        return "It can't lane split";
+    public function transport(): string {
+        return "it can move a lot of stuff";
     }
 }
