@@ -11,7 +11,7 @@ class pickup extends truck {
         $passengers = 'one to three';
         $wheels = 4;
 
-        //pass defined properties upwards
+        //pass defined properties upwards to parent class
         parent::__construct($subType, $passengers, $wheels);
 
     }
