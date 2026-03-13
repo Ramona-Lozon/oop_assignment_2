@@ -2,7 +2,9 @@
 
 namespace OOP;
 
-class truck extends vehicle {
+class truck extends vehicle implements vehicleInterface {
+
+    use speed;
     //grab properties from child classes
     public function __construct(string $subType, string $passengers, int $wheels) {
         

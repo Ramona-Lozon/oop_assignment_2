@@ -29,7 +29,9 @@ use OOP\dumpTruck;
 <body>
     <h1>Vehicles</h1>
     <?php
-
+        function displaySpeed(vehicleInterface $vehicle) {
+            echo $vehicle->speedLimit() . "<br>";
+        }
         //define local instances of classes
         $pickup = new pickup();
         $dumpTruck = new dumpTruck();
@@ -42,14 +44,15 @@ use OOP\dumpTruck;
         echo $pickup->tow() . "<br>";
         echo $pickup->support() . "<br>";
         echo $pickup->transport() . "<br>";
+        echo displaySpeed($pickup);
 
         //dump truck methods
         echo $dumpTruck->displayInfo();
-        echo $pickup->start() . "<br>";
-        echo $pickup->drive() . "<br>";
-        echo $pickup->stop() . "<br>";
-        echo $pickup->tow() . "<br>";
-        echo $pickup->transport() . "<br>";
-    ?>
+        echo $dumpTruck->start() . "<br>";
+        echo $dumpTruck->drive() . "<br>";
+        echo $dumpTruck->stop() . "<br>";
+        echo $dumpTruck->tow() . "<br>";
+        echo $dumpTruck->transport() . "<br>";
+   ?>
 </body>
 </html>
