@@ -2,7 +2,13 @@
 
 namespace OOP;
 
-class dumpTruck extends truck {
+class dumpTruck extends truck implements vehicleInterface{
+
+    use speed;
+
+    public function speedLimit(): string {
+        return "Dump Trucks dont go that fast";
+    }
     //nothing is passed upwards, so construct is empty
     public function __construct() {
 

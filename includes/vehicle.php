@@ -66,8 +66,8 @@ class vehicle {
     public function displayInfo(): string {
         return "
         <div>
-            <p>Class: " . $this->getClassName() . "</p>
-            <p>subtype: " . $this->getSubType() . "</p>
+            <h3>Class: " . $this->getClassName() . "</h3>
+            <h3>subtype: " . $this->getSubType() . "</h3>
             <p>What Defines it?: " . $this->getDefinition() . "</p>
             <p>How big is the engine?: " . $this->getEngineSize() . "</p>
             <p>What can it do?: " . $this->getCharacteristics() . "</p>
