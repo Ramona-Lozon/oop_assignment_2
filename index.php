@@ -2,14 +2,14 @@
 
 // standard php library
 spl_autoload_register(function ($class) {
-    var_dump($class);
+    //var_dump($class);
     $class = str_replace('OOP\\', '', $class);
-    var_dump($class);
+    //var_dump($class);
     $class = str_replace("\\", DIRECTORY_SEPARATOR, $class);
-    var_dump($class);
+    //var_dump($class);
     $filepath = __DIR__ . '\includes/' . $class . '.php';
     $filepath = str_replace('/', DIRECTORY_SEPARATOR, $filepath);
-    var_dump($filepath);
+    //var_dump($filepath);
     require_once $filepath;
 });
 
@@ -17,6 +17,7 @@ spl_autoload_register(function ($class) {
 use OOP\truck;
 use OOP\pickup;
 use OOP\dumpTruck;
+use OOP\vehicleInterface;
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +54,7 @@ use OOP\dumpTruck;
         echo $dumpTruck->stop() . "<br>";
         echo $dumpTruck->tow() . "<br>";
         echo $dumpTruck->transport() . "<br>";
+        echo displaySpeed($dumpTruck);
    ?>
 </body>
 </html>

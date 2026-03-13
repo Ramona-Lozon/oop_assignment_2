@@ -2,7 +2,9 @@
 
 namespace OOP;
 
-class pickup extends truck {
+class pickup extends truck implements vehicleInterface {
+
+    use speed;
     //nothing is passed upwards, so construct is empty
     public function __construct() {
 
